@@ -16,6 +16,7 @@
 		<None Remove="Controls\HeaderControl.xaml" />
 		<None Remove="Images\logo.JPG" />
 		<None Remove="Resources\Brushes.xaml" />
+		<None Remove="Resources\Styles.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -43,6 +44,11 @@
   -->
 	<ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
 		<ProjectCapability Include="Msix" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Update="Resources\Styles.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
 	</ItemGroup>
 	<ItemGroup>
 		<Page Update="Controls\HeaderControl.xaml">
